@@ -1,0 +1,301 @@
+@import "../../style/config";
+
+.about {
+  color: $color-light-white;
+  padding: 3.5rem 6rem 1rem 6rem;
+
+  // ##### start about me section ######
+  &__me {
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+
+    display: flex;
+    flex-direction: column;
+
+    border-bottom: 0.8px solid $color-grey-4;
+
+    &--heading {
+      align-self: center;
+
+      h1 {
+        font-family: $font-secondary;
+        font-size: 55px;
+        font-weight: 900;
+        text-transform: uppercase;
+        text-align: center;
+        span {
+          color: $color-light-blue;
+        }
+      }
+
+      p {
+        text-transform: uppercase;
+        font-size: 15px;
+        position: relative;
+      }
+      p::before {
+        content: " ";
+        position: absolute;
+        top: 10px;
+        left: -50px;
+        width: 2rem;
+        height: 2px;
+        background-color: $color-light-blue;
+      }
+      p::after {
+        content: " ";
+        position: absolute;
+        top: 10px;
+        right: -50px;
+        width: 2rem;
+        height: 2px;
+        background-color: $color-light-blue;
+      }
+    }
+
+    &--details {
+      margin: 3rem 0;
+      padding: 0 2rem;
+      display: flex;
+    }
+
+    &--image {
+      position: relative;
+      max-width: 400px;
+      display: block;
+
+      img {
+        display: block;
+        max-width: 400px;
+        height: auto;
+      }
+    }
+
+    &--image::before {
+      display: inline-block;
+      content: " ";
+      border: 6px solid $color-light-blue;
+      width: 400px;
+      height: 400px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: -1;
+      transform: translate3d(26px, 26px, -26px);
+    }
+
+    &--detail {
+      padding-left: 5rem;
+      display: flex;
+      flex-direction: row;
+    }
+
+    &--lists1,
+    &--lists2 {
+      padding-top: 6rem;
+      list-style: none;
+
+      li {
+        padding-bottom: 1.6rem;
+        color: $color-grey-4;
+
+        span {
+          padding-left: 10px;
+          color: $color-white;
+        }
+      }
+    }
+    &--lists2 {
+      padding-left: 3rem;
+    }
+  }
+  // ##### end about me section ######
+
+  // ##### start about background section ######
+  &__background {
+    padding-top: 3rem;
+    // display: flex;
+    // justify-items: center;
+
+    &--experience,
+    &--education {
+      h2 {
+        font-size: 1.4rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        padding-bottom: 3rem;
+        text-align: center;
+      }
+
+      svg {
+        width: 1rem;
+        height: 1rem;
+        fill: $color-grey-4;
+        transform: translateY(3px);
+      }
+    }
+    &--item {
+      position: relative;
+      width: 60%;
+      margin: 0 auto;
+      text-align: center;
+    }
+    &--item::before,
+    &--item::after {
+      content: " ";
+      width: 0.7px;
+      height: 100%;
+      position: absolute;
+      top: 0;
+
+      background: $color-light-blue;
+      opacity: 0.8;
+    }
+
+    &--item::before {
+      left: 0;
+    }
+    &--item::after {
+      right: -16px;
+    }
+    .item-circle,
+    .item-circle2 {
+      background: #222;
+      border: 2px solid $color-light-blue;
+
+      position: absolute;
+
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+    }
+    .item-circle {
+      top: 0;
+      left: -7px;
+    }
+    .item-circle2 {
+      z-index: 10;
+      bottom: 0;
+      right: -22px;
+    }
+
+    &--card {
+      padding: 0 2rem;
+      width: 90%;
+
+      display: flex;
+      flex-direction: column;
+
+      .about__background--cardheader {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .card--years {
+        display: flex;
+        padding-bottom: 1rem;
+        // width: 100%;
+        // margin: 0 auto;
+
+        span {
+          padding-left: 0.8rem;
+          font-size: 14px;
+          color: $color-grey-4;
+        }
+      }
+      .card--header {
+        padding-bottom: 0.9rem;
+        h3 {
+          font-size: 17px;
+          text-transform: uppercase;
+          font-weight: 400;
+        }
+        h3 > span:last-of-type {
+          font-weight: 700;
+        }
+        .separator {
+          width: 12px;
+          height: 3px;
+          background-color: $color-grey-3;
+          margin: 0 8px 3px 8px;
+          display: inline-block;
+          vertical-align: middle;
+        }
+      }
+    }
+    .card--padding-bottom {
+      padding-bottom: 3rem;
+    }
+    &--cardbody {
+      p {
+        font-size: 14px;
+        line-height: 1.7;
+        color: $color-white;
+        opacity: 0.8;
+      }
+    }
+
+    &--education {
+      // I am centeralizing About background education with padding left and assign about__background--card's width 90%
+      padding-left: 3rem;
+    }
+  }
+  // ##### end about background section ######
+  // ##### start about skills section ######
+  &__skills {
+    padding-top: 3rem;
+    padding-bottom: 1rem;
+
+    &--head {
+      h2 {
+        font-size: 1.4rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        padding-bottom: 2.6rem;
+      }
+    }
+
+    &--body {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-column-gap: 3rem;
+    }
+    &--item {
+      margin-bottom: 2rem;
+      h5 {
+        font-size: 17px;
+        text-transform: uppercase;
+        font-weight: 400;
+
+        padding-bottom: 10px;
+      }
+    }
+    &--progress {
+      height: 5px;
+      width: 100%;
+      background: $color-grey-2;
+      border-radius: 2px;
+      position: relative;
+
+      .skills--progressbar {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        background: $color-light-blue;
+        border-radius: 10px;
+        transition: all 1.4s;
+      }
+      .skills--progressbar::before {
+        content: attr(data-value);
+        position: absolute;
+        top: -35px;
+        right: 0;
+        color: $color-light-blue;
+      }
+    }
+  }
+  // ##### end about skills section ######
+}

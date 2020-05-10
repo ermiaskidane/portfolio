@@ -1,0 +1,180 @@
+@import "../../style/config";
+
+.homeScreen {
+  text-align: center;
+  font-family: $font-primary;
+
+  height: 100vh;
+
+  &__content {
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    grid-column-gap: 2rem;
+    width: 80%;
+
+    margin-left: auto;
+    margin-right: 1rem;
+    padding-top: 20vh;
+
+    &--img {
+      img {
+        width: 18rem;
+        height: 18rem;
+        border: 6px solid rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+      }
+    }
+
+    &--detail {
+      justify-self: start;
+      align-self: center;
+
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+
+      color: $color-light-white;
+
+      h4 {
+        font-size: 22px;
+        font-weight: 400;
+      }
+      h2 {
+        font-size: 38px;
+        font-weight: 700;
+        font-family: $font-secondary;
+        text-transform: uppercase;
+      }
+      p {
+        text-align: start;
+        line-height: 32px;
+        font-weight: 400;
+        font-size: 16px;
+        margin-bottom: 1.5rem;
+        margin-top: 6px;
+      }
+    }
+    &--buttons {
+      #Button--user,
+      #Button--suitcase {
+        text-transform: uppercase;
+        border: 1px solid $color-light-blue;
+        border-radius: 1.4rem;
+      }
+
+      #Button--user span,
+      #Button--suitcase span {
+        padding-right: 0.5rem;
+      }
+
+      #Button--user {
+        padding: 10px 18px;
+        margin-right: 2.5rem;
+        color: $color-light-white;
+        background-color: $color-light-blue;
+
+        svg {
+          width: 0.9rem;
+          height: 0.9rem;
+          fill: $color-light-white;
+        }
+      }
+      #Button--suitcase {
+        padding: 10px 35px;
+        color: $color-light-blue;
+        background-color: rgba(0, 0, 0, 0.85);
+
+        svg {
+          width: 0.9rem;
+          height: 0.9rem;
+          fill: $color-light-blue;
+        }
+      }
+
+      #Button--user:hover {
+        background: $color-grey-1;
+        border: 1px solid $color-grey-1;
+      }
+
+      #Button--suitcase:hover {
+        color: $color-light-white;
+        background: $color-light-blue;
+
+        .button__suitcase--link {
+          color: $color-light-white;
+        }
+        svg {
+          fill: $color-light-white;
+        }
+      }
+
+      .button__user--link,
+      .button__suitcase--link {
+        text-decoration: none;
+      }
+
+      .button__user--link {
+        color: $color-light-white;
+      }
+
+      .button__suitcase--link {
+        color: $color-light-blue;
+      }
+    }
+  }
+
+  //####### media query ###########
+  & {
+    &__content {
+      @media only screen and (max-width: 1060px) {
+        width: 90%;
+      }
+      @media only screen and (max-width: 941px) {
+        grid-template-columns: 1fr;
+        grid-row-gap: 2rem;
+        margin-left: 1rem;
+        padding-top: 12vh;
+        padding-bottom: 10vh;
+      }
+
+      &--img img {
+        @media only screen and (max-width: 500px) {
+          width: 100%;
+          height: auto;
+        }
+      }
+      &--detail {
+        @media only screen and (max-width: 941px) {
+          justify-self: center;
+        }
+        h4,
+        h2 {
+          @media only screen and (max-width: 941px) {
+            align-self: center;
+          }
+        }
+      }
+
+      &--buttons {
+        @media only screen and (max-width: 941px) {
+          align-self: center;
+        }
+
+        @media only screen and (max-width: 500px) {
+          align-self: center;
+
+          display: flex;
+          flex-direction: column;
+        }
+
+        #Button--user {
+          @media only screen and (max-width: 500px) {
+            margin-bottom: 1rem;
+            margin-right: 0;
+            align-self: center;
+          }
+        }
+      }
+    }
+  }
+}
