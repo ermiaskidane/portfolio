@@ -10,12 +10,8 @@ import Sprite from "../../assets/sprite.svg";
 import Coffee1 from "../../assets/mega-food (Custom).png";
 
 import Coffee2 from "../../assets/coffee-2.jpg";
-// import Coffee3 from "../../assets/coffee-3.jpg";
-// import Coffee4 from "../../assets/coffee-4.jpg";
-// import CoffeeShop from "../../assets/coffee-shop-1.jpg";
-// import Tea1 from "../../assets/tea-1.jpg";
-// import Tea2 from "../../assets/tea-2.jpg";
-// import Tea3 from "../../assets/tea-3.jpg";
+import LindaShop from "../../assets/lindaShop.png";
+
 import "./portfolio.scss";
 
 class Portfolio extends Component {
@@ -138,7 +134,9 @@ class Portfolio extends Component {
                         github
                       </button>
                       <button id="show">
-                        <a href="https://takeaway-food.herokuapp.com">show</a>
+                        <a href="https://ermiaskidane.github.io/takeaway/">
+                          show
+                        </a>
                       </button>
                     </div>
                   </div>
@@ -147,7 +145,7 @@ class Portfolio extends Component {
             </div>
           </figure>
           <figure className="portfolio__body--img">
-            <img className="project--image" src={Coffee2} alt="project" />
+            <img className="project--image" src={LindaShop} alt="project" />
             <figcaption onClick={this.proj2Handler}>
               <h3>Linda Shop</h3>
             </figcaption>
@@ -158,17 +156,17 @@ class Portfolio extends Component {
                   <h2>Linda Shop</h2>
                   <div className="subPortfolio__content--refer">
                     <p>
-                      {/* Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                      Voluptates sed reprehenderit omnis corrupti laborum ab
-                      enim assumenda, maiores quia molestiae optio atque cum
-                      inventore? Dolores fugit mollitia reiciendis nostrum et! */}
+                      Linda Shop is a landing page for women fashion clothes
+                      with responsive web pages in all devices.
                     </p>
                     <div className="subPortfolio__content--button">
                       <button id="github" type="button">
                         <a href="https://github.com/ermiaskidane">github</a>
                       </button>
                       <button id="show">
-                        <a href="#">show</a>
+                        <a href="https://ermiaskidane.github.io/Linda-Shop/">
+                          show
+                        </a>
                       </button>
                     </div>
                   </div>
